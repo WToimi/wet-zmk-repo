@@ -32,5 +32,8 @@
                     <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        debounce-press-ms = <7>;
+        debounce-press-ms = <7>;
+        debounce-scan-period-ms = <2>;
     };
 };
