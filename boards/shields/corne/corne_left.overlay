@@ -1,0 +1,23 @@
+#include "corne.dtsi"
+
+ / {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,matrix_transform = &default_transform;
+    };
+ };
+
+
+&kscan0 {
+    /* I redefine the diode direction here because otherwise it seems to revert to default */
+    /* diode-direction = "row2col"; */
+    col-gpios = <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+
+    diode-direction = "row2col";                
+};
+
