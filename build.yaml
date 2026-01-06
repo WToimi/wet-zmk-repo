@@ -21,7 +21,11 @@
 include:
   - board: nice_nano_v2
     shield: corne_left
+    overlays:
+      - boards/shields/corne/corne_left.overlays
   - board: nice_nano_v2
     shield: corne_right
+    overlays:
+      - boards/shields/corne/corne_right.overlays
   - board: nice_nano_v2
     shield: settings_reset
